@@ -54,3 +54,12 @@ function randomRange(myMin, myMax) {
 
 
 //Find Numbers with Regular Expressions
+var expression = /\d+/gi;
+
+
+//Find White Space with Regular Expressions
+var expression = /\s+/gi;
+
+
+//Invert Regular Expression Matches with JavaScript
+var expression = /\S/gi;
