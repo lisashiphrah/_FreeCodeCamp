@@ -70,3 +70,10 @@ var newArray = oldArray.filter(function(val) {
 array.sort(function(a, b) {
   return a < b;
 });
+
+
+//Reverse Arrays with reverse
+newArray = array.reverse();
+
+
+//Concatenate Arrays with concat
