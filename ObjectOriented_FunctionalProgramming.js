@@ -86,3 +86,9 @@ array = string.split(' ');
 
 //Join Strings with join
 joinedString = joinMe.join(' ');
+
+
+//Reverse a String
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
