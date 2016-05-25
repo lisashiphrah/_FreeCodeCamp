@@ -92,3 +92,14 @@ joinedString = joinMe.join(' ');
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
+
+//Factorialize a Number
+function factorialize(num) {
+  var i = 1;
+  var index = 1;
+  while(index <= num) {
+    i = i * index;
+    index++;
+  }
+  return i;
+}
