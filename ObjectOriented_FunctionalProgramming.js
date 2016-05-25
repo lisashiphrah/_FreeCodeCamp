@@ -48,4 +48,10 @@ var Bike = function() {
 };
 
 
+//Iterate over Arrays with map
+var newArray = oldArray.map(function(val){
+  return val + 3;
+});
 
+
+//Condense arrays with reduce
