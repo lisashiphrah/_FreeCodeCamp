@@ -58,3 +58,15 @@ var newArray = oldArray.map(function(val){
 singleVal = array.reduce(function(previousVal, currentVal){
   return previousVal + currentVal;
 });
+
+
+//Filter Arrays with filter
+var newArray = oldArray.filter(function(val) {
+  return val < 6;
+});
+
+
+//Sort Arrays with sort
+array.sort(function(a, b) {
+  return a < b;
+});
