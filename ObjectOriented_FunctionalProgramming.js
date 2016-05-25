@@ -80,3 +80,5 @@ newArray = array.reverse();
 newArray = oldArray.concat(concatMe);
 
 
+//Split Strings with split
+array = string.split(' ');
