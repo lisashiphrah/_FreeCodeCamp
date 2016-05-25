@@ -103,3 +103,16 @@ function factorialize(num) {
   }
   return i;
 }
+
+
+//Check for Palindromes
+function palindrome(str) {
+
+  var str1 = str.toLowerCase().replace(/\W|_/g, '');
+  var str2 = str1.split('').reverse().join('');
+
+  if(str2 === str1) {
+    return true;
+  } 
+  return false;
+}
