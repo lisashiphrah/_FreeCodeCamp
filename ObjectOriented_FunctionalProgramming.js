@@ -77,3 +77,6 @@ newArray = array.reverse();
 
 
 //Concatenate Arrays with concat
+newArray = oldArray.concat(concatMe);
+
+
