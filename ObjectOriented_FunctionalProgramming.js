@@ -8,3 +8,10 @@ var motorBike = {
 
 
 //Construct JavaScript Objects with Functions
+var MotorBike = function() {
+  this.engines = 1;
+  this.wheels = 2;
+  this.seats = 1;
+};
+
+
