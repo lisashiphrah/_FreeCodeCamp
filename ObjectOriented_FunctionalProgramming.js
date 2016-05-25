@@ -82,3 +82,7 @@ newArray = oldArray.concat(concatMe);
 
 //Split Strings with split
 array = string.split(' ');
+
+
+//Join Strings with join
+joinedString = joinMe.join(' ');
