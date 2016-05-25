@@ -116,3 +116,16 @@ function palindrome(str) {
   } 
   return false;
 }
+
+
+//Find the Longest Word in a String
+function findLongestWord(str) {
+  var array = str.split(' ');
+  var x = 0;
+  for(var i = 0; i < array.length; i++){
+    if(x < array[i].length){
+      x = array[i].length;
+    }
+  }
+  return x;
+}
