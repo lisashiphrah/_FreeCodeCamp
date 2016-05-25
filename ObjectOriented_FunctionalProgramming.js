@@ -55,3 +55,6 @@ var newArray = oldArray.map(function(val){
 
 
 //Condense arrays with reduce
+singleVal = array.reduce(function(previousVal, currentVal){
+  return previousVal + currentVal;
+});
