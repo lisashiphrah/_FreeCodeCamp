@@ -129,3 +129,33 @@ function findLongestWord(str) {
   }
   return x;
 }
+
+
+//Title Case a Sentence
+function titleCase(str) {  
+  str = str.toLowerCase().split(' ');
+
+  for(var i = 0; i < str.length; i++){
+    str[i] = str[i].split('');
+    str[i][0] = str[i][0].toUpperCase(); 
+    str[i] = str[i].join('');
+  }
+  return str.join(' ');
+}
+
+
+//Return Largest Numbers in Arrays
+function largestOfFour(arr) {  
+  var largest = [0, 0, 0, 0];  
+  for(var i = 0; i < arr.length; i++)
+  { 
+    for(var j = 0; j < arr[i].length; j++)
+    { 
+      if(largest[i] < arr[i][j])
+      {  
+        largest[i] = arr[i][j];  
+      } 
+    }
+  }
+  return largest;
+}
