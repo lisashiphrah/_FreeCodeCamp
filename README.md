@@ -2,7 +2,9 @@
 
 </br>
 
-<h5>List of codes created <a href="https://www.freecodecamp.com/lisashiphrah">by lisashiphrah</a> on FreeCodeCamp</h5>
+<h5>List of codes created by
+	<a target="_blank" href="https://www.freecodecamp.com/lisashiphrah">lisashiphrah</a>
+on FreeCodeCamp</h5>
 
 <img src="Capture.PNG" width="550">
 
