@@ -159,3 +159,14 @@ function largestOfFour(arr) {
   }
   return largest;
 }
+
+//Confirm the Ending
+function confirmEnding(str, target) {  
+  var size = target.length;
+
+  if(str.substr(-size) === target)
+  {
+    return true;
+  }
+    return false;
+}
