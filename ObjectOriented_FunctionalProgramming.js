@@ -170,3 +170,78 @@ function confirmEnding(str, target) {
   }
     return false;
 }
+
+//Repeat a string repeat a string
+function repeatStringNumTimes(str, num) {
+  if(num === 0)
+  {
+      return str;
+    } 
+  else if(num > 0)
+  {
+      var newStr = "";
+      for(var i = 0; i < num; i++)
+      {
+        newStr += str;
+      }
+    return newStr;
+  } 
+    return "";
+}
+
+//Truncate a string
+function truncateString(str, num) {
+  var ending = "...";
+  if (str.length > num)
+  {
+    if (num > 3 )
+    {
+    	str = str.slice(0,num-3);
+    	return str + ending;
+    }
+    else
+    {
+      str = str.slice(0,num);
+      return str + ending;
+    }
+  }
+  return str;
+}
+
+
+//Chunky Monkey
+function chunkArrayInGroups(arr, size) {  
+  var array = [];
+  var i = 0;
+  while (i < arr.length)
+  {
+    array.push(arr.slice(i, i += size));
+  }
+  return array;
+}
+
+
+//Slasher Flick
+function slasher(arr, howMany) {  
+  arr.splice(0,howMany);
+  return arr;
+}
+
+
+//Mutations
+function mutation(arr) {  
+  var a = arr[0].toLowerCase();
+  var b = arr[1].toLowerCase();
+
+  for(var i = 0; i < b.length; i++)
+  {
+    var x = a.indexOf(b[i]);
+    if (x === -1)
+    {
+      return false;
+    }
+  }
+  return true;
+}
+
+
