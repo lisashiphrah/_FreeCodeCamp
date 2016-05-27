@@ -2,11 +2,9 @@
 
 </br>
 
-<h5>List of codes created <a href="https://www.freecodecamp.com/lisashiphrah">by user</a> on FreeCodeCamp</h5>
+<h5>List of codes created <a href="https://www.freecodecamp.com/lisashiphrah">by lisashiphrah</a> on FreeCodeCamp</h5>
 
-</br>
-
-<img src="Capture.PNG"/>
+<img src="Capture.PNG" width="550">
 
 <h4>Front End Development Certification</h4>
 <ol>
