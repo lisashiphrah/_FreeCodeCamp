@@ -6,6 +6,8 @@
 
 </br>
 
+<img src="Capture.PNG"/>
+
 <h4>Front End Development Certification</h4>
 <ol>
   <li><b>HTML5 and CSS</b>
