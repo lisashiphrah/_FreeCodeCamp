@@ -245,3 +245,51 @@ function mutation(arr) {
 }
 
 
+//Falsy Bouncer
+function bouncer(arr) {  
+  function check(value){
+    return Boolean(value);
+  }
+  
+  var result = arr.filter(check);
+  return result;
+}
+
+
+//Seek and Destroy
+function destroyer(arr) { 
+  args = Array.prototype .slice.call(arguments,1); 
+  function remove(x) { return args.indexOf(x) === -1; }
+  return arguments[0].filter(remove);
+}
+
+
+//Where do I belong
+
+function getIndexToIns(arr, num) {
+  arr.sort(function(a, b) {
+    return a - b;
+  });
+
+  for (var a = 0; a < arr.length; a++) {
+    if (arr[a] >= num)
+      return parseInt(a);
+  }
+
+  return arr.length;
+}
+
+
+//Caesars Cipher
+function rot13(str) {
+   return str.split('').map.call(str, function(char){
+      x = char.charCodeAt(0);
+      if (x < 65 || x > 90) {
+        return String.fromCharCode(x);
+      }
+      else if (x < 78) {
+        return String.fromCharCode(x + 13);
+      }
+      return String.fromCharCode(x - 13);
+    }).join('');
+}
