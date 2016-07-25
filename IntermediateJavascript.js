@@ -40,8 +40,6 @@ function diffArray(arr1, arr2) {
           newArr.push(element);
         }
     }
-  
-  
   return newArr;
 }
 
@@ -66,3 +64,32 @@ function convertToRoman(num) {
 }
 
 convertToRoman(36);
+
+
+//Wherefore art thou
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  for(var index = 0; index < collection.length; index++)
+    {
+        var obj = collection[index];
+        var found = true;
+      
+        for(var prop in source)
+        {
+          if(source[prop] != obj[prop])
+            {
+              found = false;
+            }
+        }
+        if(found)
+        {
+            arr.push(collection[index]);
+        }
+    }
+  // Only change code above this line
+  return arr;
+}
+
+
