@@ -127,3 +127,31 @@ function translatePigLatin(str) {
     }
 }
 translatePigLatin("glove");
+
+
+
+//DNA Pairing
+function pairElement(str) {
+  var array = [];
+  for(var index = 0; index < str.length; index++)
+    {
+      if(str[index] == 'A')
+        {
+          array[index] = ['A','T'];
+        }
+      else if(str[index] == 'T')
+        {
+          array[index] = ['T','A'];
+        }
+      else if(str[index] == 'C')
+        {
+          array[index] = ['C','G'];
+        }
+      else
+        {
+          array[index] = ['G','C'];
+        }
+    }
+  return array;
+}
+pairElement("GCG");
