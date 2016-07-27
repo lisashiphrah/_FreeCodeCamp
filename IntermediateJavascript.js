@@ -95,3 +95,35 @@ myReplace("His name is Tom", "Tom", "john");
 
 
 //Pig Latin
+function translatePigLatin(str) {
+  var vowel = ['a', 'e', 'i', 'o', 'u'];
+  if(vowel.indexOf(str[0]) != -1)
+    {
+      return str + 'way';
+    }
+  else if(vowel.indexOf(str[1]) != -1)
+    {
+      return str.substr(1) + str[0] + 'ay';
+    }
+  else
+    {
+      var cluster = [];
+      var index = 0;
+      for(index = 0; index < str.length; index++)
+        {
+          aux = index;
+          
+          if(vowel.indexOf(str[index]) == -1)
+            {
+              cluster[index] = str[index];
+              aux = index;
+            }
+          else
+            {
+              break;
+            }
+        }
+      return str.substr(index) + cluster.join('') + 'ay';
+    }
+}
+translatePigLatin("glove");
