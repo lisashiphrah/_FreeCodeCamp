@@ -173,3 +173,13 @@ function fearNotLetter(str) {
 }
 
 fearNotLetter("abce");
+
+
+
+//Boo who
+function booWho(bool) {
+  if(bool === true || bool === false)
+    return true;
+  return false;
+}
+booWho(null);
