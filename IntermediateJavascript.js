@@ -203,3 +203,13 @@ function uniteUnique(arr) {
 }
 
 
+//Convert HTML Entities
+function convertHTML(str) {
+  str = str.split('&').join('&amp;');
+  str = str.split('<').join('&lt;');
+  str = str.split('>').join('&gt;');
+  str = str.split('\"').join('&quot;');
+  str = str.split("\'").join('&apos;');
+  return str;
+}
+convertHTML('Stuff in "quotation marks"');
