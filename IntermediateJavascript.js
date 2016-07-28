@@ -213,3 +213,13 @@ function convertHTML(str) {
   return str;
 }
 convertHTML('Stuff in "quotation marks"');
+
+
+
+//Spinal Tap Case
+function spinalCase(str) { 
+  str = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+  str = str.replace(/\s+|_+/g, '-').toLowerCase();
+  return str;
+}
+spinalCase("thisIsSpinalTap");
