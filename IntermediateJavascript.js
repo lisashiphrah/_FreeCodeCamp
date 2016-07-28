@@ -183,3 +183,23 @@ function booWho(bool) {
   return false;
 }
 booWho(null);
+
+
+
+//Sorted Union
+function uniteUnique(arr) {
+  var result = [];
+  for(var index = 0; index < arguments.length; index++)
+    {
+      for(var index2 = 0; index2 < arguments[index].length; index2++)
+        {
+          if(result.indexOf(arguments[index][index2]) == -1)
+            {
+              result.push(arguments[index][index2]);
+            }
+        }
+    }
+  return result;
+}
+
+
