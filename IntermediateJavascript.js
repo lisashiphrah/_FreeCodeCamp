@@ -247,4 +247,30 @@ function sumFibs(num) {
 sumFibs(4);
 
 
+
 //Sum All Primes
+function sumPrimes(num) {
+  var array = [];
+  var primeSum = 0;
+  
+  for(var index = 2; index <= num; index++)
+    {
+      var isPrime = true;
+      for(var index2 = 0; index2 < array.length; index2++)
+        {
+          if(index % array[index2] === 0)
+            {
+              isPrime = false;
+              break;
+            }
+        }
+      if(isPrime)
+        {
+          primeSum += index;
+        }
+      array.push(index);
+    }
+  return primeSum;
+}
+
+sumPrimes(10);
