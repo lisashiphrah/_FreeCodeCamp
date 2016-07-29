@@ -333,5 +333,15 @@ function dropElements(arr, func) {
     }
   return arr;
 }
-
 dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})
+
+
+
+//Steamroller
+function steamrollArray(arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(Array.isArray(toFlatten) ? steamrollArray(toFlatten) : toFlatten);
+  }, []);
+}
+// test here
+steamrollArray([1, [2], [3, [[4]]]]);
