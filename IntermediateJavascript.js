@@ -274,3 +274,33 @@ function sumPrimes(num) {
 }
 
 sumPrimes(10);
+
+
+
+//Smallest Common Multiple
+function smallestCommons(arr) {
+  var quot = 0;
+  var loop = 1;
+  var n;
+  
+  arr.sort(function(a, b) {
+    return b - a;
+  });
+
+  var newArr = [];
+  for (var i = arr[0]; i >= arr[1]; i--) {
+    newArr.push(i);
+  }
+  
+  while (n !== newArr.length) {
+    quot = newArr[0] * loop * newArr[1];
+    for (n = 2; n < newArr.length; n++) {
+      if (quot % newArr[n] !== 0) {
+        break;
+      }
+    }
+    loop++;
+  }
+ 
+  return quot;
+}
