@@ -223,3 +223,28 @@ function spinalCase(str) {
   return str;
 }
 spinalCase("thisIsSpinalTap");
+
+
+
+//Sum All Odd Fibonacci Numbers
+function sumFibs(num) {
+  var sum = 0;
+  var returnSum = 0;
+  var index = 1;
+  var previous = 0;
+  while(index <= num)
+    {
+      if(index % 2 !== 0)
+        {
+          returnSum = returnSum + index;
+        }
+      sum = sum + index;    
+      index = index + previous;
+      previous = index - previous;
+    }
+  return returnSum;
+}
+sumFibs(4);
+
+
+//Sum All Primes
