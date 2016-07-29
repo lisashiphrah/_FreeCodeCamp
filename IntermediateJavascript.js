@@ -313,3 +313,25 @@ function findElement(arr, func) {
 }
 
 findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+
+
+//Drop it
+function dropElements(arr, func) {
+  var newArray = arr.filter(func);
+  var returnArray = [];
+  var index = 0; 
+  while(true)
+    {
+      if(arr[index] != newArray[0])
+        {
+          arr.shift();
+        }
+      else
+        {
+          break;
+        }
+    }
+  return arr;
+}
+
+dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})
