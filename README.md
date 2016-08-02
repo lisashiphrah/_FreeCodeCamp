@@ -257,4 +257,29 @@ on FreeCodeCamp</h5>
   	</ul>
   </li>
   
+  <li><b>Intermediate Algorithm Scripting</b>
+  	<ul>
+	  	<li>Sum All Numbers in a Range </li>
+		<li>Diff Two Arrays</li>
+		<li>Roman Numeral Converter</li>
+		<li>Wherefore art thou</li>
+		<li>Search and Replace</li>
+		<li>Pig Latin</li>
+		<li>DNA Pairing</li>
+		<li>Missing letters</li>
+		<li>Boo who</li>
+		<li>Sorted Union</li>
+		<li>Convert HTML Entities</li>
+		<li>Spinal Tap Case</li>
+		<li>Sum All Odd Fibonacci Numbers</li>
+		<li>Sum All Primes</li>
+		<li>Smallest Common Multiple </li>
+		<li>Finders Keepers </li>
+		<li>Drop it </li>
+		<li>Steamroller </li>
+		<li>Binary Agents </li>
+		<li>Everything Be True </li>
+		<li>Arguments Optional</li>
+  	</ul>
+  </li>
 </ol>
