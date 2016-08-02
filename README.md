@@ -248,4 +248,13 @@ on FreeCodeCamp</h5>
  	</ul>
   </li>
   
+  <li><b>Intermediate Front End Development Projects</b>
+  	<ul>
+  		<li>Build a Random Quote Machine</li>
+		<li>Show the Local Weather</li>
+		<li>Build a Wikipedia Viewer</li>
+		<li>Use the Twitch.tv JSON API</li>
+  	</ul>
+  </li>
+  
 </ol>
