@@ -4,6 +4,7 @@ function telephoneCheck(str) {
   return regex.test(str);
 }
 
+
 //Symmetric Difference
 function sym(args) {
   var args = Array.prototype.slice.call(arguments);
@@ -25,3 +26,6 @@ function sym(args) {
   return args.reduce(getDiff, []);
 }
 sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])
+
+
+//Exact Change
