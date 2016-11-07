@@ -119,23 +119,26 @@ checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1
 
 //Inventory Update
 function updateInventory(arr1, arr2) {
-    function updateInventory(arr1, arr2) {
   for(var index = 0; index < arr2.length; index++) {
     var item = arr2[index];
     var found = false;
+    //if exists, update
     for(var index2 = 0; index2 < arr1.length; index2++){
       if(arr1[index2][1] == arr2[index][1]) {
         found = true;
-        arr1[index2][0] = arr1[index2][0] + arr2[index];
-        return arr1[index2][0];
+        arr1[index2][0] = parseInt(arr1[index2][0]) + parseInt(arr2[index]);
       }
     }
-
+    //if it is new, add
+    if(!found) {
+      arr1.push(arr2[index][1]);
+    }
   }
   
-  return arr1;
+  var result = printInventory(arr1);
+  return result;
 }
-}
+
 var curInv = [
     [21, "Bowling Ball"],
     [2, "Dirty Sock"],
