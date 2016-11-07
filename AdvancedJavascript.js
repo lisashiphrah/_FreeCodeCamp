@@ -167,7 +167,38 @@ updateInventory(curInv, newInv);
 
 //No repeats please
 function permAlone(str) {
-  return str;
+  var array = str.split('');
+  var result = [];
+  var temp = '';
+  
+  function heapPermutation(size) {
+      if (size == 1) {
+          result.push(array.join(''));
+      }
+
+      for (var i=0; i < size; i++)
+      {
+          heapPermutation(size-1);
+          if (size % 2 == 1)
+          {
+              temp = array[0];
+              array[0] = array[size-1];
+              array[size-1] = temp;
+          }
+
+          else
+          {
+              temp = array[i];
+              array[i] = array[size-1];
+              array[size-1] = temp;
+          }
+      }
+  }
+  
+  heapPermutation(array.length);
+  
+  return result;
 }
 
 permAlone('aab');
+
