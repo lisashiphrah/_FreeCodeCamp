@@ -168,12 +168,14 @@ updateInventory(curInv, newInv);
 //No repeats please
 function permAlone(str) {
   var array = str.split('');
-  var result = [];
+  var regex = /(.)\1+/g;
+  var allPermutations = [];
+  var result = 0;
   var temp = '';
   
   function heapPermutation(size) {
       if (size == 1) {
-          result.push(array.join(''));
+          allPermutations.push(array.join(''));
       }
 
       for (var i=0; i < size; i++)
@@ -194,11 +196,22 @@ function permAlone(str) {
           }
       }
   }
+
+  function validate() {
+    for(var index = 0; index < allPermutations.length; index++) {
+      var permutation = allPermutations[index]; 
+      
+      if(!permutation.match(regex)) {
+        result++;
+      }
+    }
+  }
   
   heapPermutation(array.length);
+  validate();
   
   return result;
 }
-
 permAlone('aab');
+
 
