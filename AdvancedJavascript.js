@@ -162,3 +162,12 @@ var newInv = [
 ];
 
 updateInventory(curInv, newInv);
+
+
+
+//No repeats please
+function permAlone(str) {
+  return str;
+}
+
+permAlone('aab');
