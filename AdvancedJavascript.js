@@ -215,3 +215,26 @@ function permAlone(str) {
 permAlone('aab');
 
 
+
+//Friendly Date Ranges
+function makeFriendlyDates(arr) {
+  var dayArray = [0, 'st', 'nd', 'rd'];
+  var monthArray = [0, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  
+  var year1 = arr[0].substr(0,4);
+  var month1 = parseInt(arr[0].substr(5,2));
+  var day1 = parseInt(arr[0].substr(8,2));
+  
+  var year2 = arr[1].substr(0,4);
+  var month2 = parseInt(arr[1].substr(5,2));
+  var day2 = parseInt(arr[1].substr(8,2)); 
+  
+  var result = '';
+  
+  
+  return result;
+}
+
+makeFriendlyDates(['2016-07-01', '2016-07-04']);
+
+
