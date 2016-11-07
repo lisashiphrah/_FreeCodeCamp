@@ -131,12 +131,20 @@ function updateInventory(arr1, arr2) {
     }
     //if it is new, add
     if(!found) {
-      arr1.push(arr2[index][1]);
+      arr1.push(arr2[index]);
     }
   }
   
   var result = printInventory(arr1);
   return result;
+}
+
+function printInventory(arr1) {
+  return arr1.sort(function(a,b){
+    if(a[1] < b[1]) return -1;
+    else if(a[1] > b[1]) return 1;
+    else return 0;
+  });
 }
 
 var curInv = [
