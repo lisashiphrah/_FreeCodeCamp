@@ -217,7 +217,6 @@ permAlone('aab');
 
 
 //Friendly Date Ranges
-
 function makeFriendlyDates(arr) {
   var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   
@@ -262,14 +261,25 @@ function makeFriendlyDates(arr) {
       return '';
     }
     else {
-      return monthArray[date2.getMonth()];
+      return monthArray[date2.getMonth()] + ' ';
     }
-    
-    
-    return '';
   }
   
+  //returns the text that should be displayed for year ending
   function getFriendlyYearEnding() {
+    if (date1.getMonth() === date2.getMonth() &&
+       date1.getFullYear() !== date2.getFullYear() &&
+       date1.getDate() > date2.getDate()){
+      return '';
+    }
+    
+    else if((((Math.floor((date2 - date1) / (1000*60*60*24)))) > 360) ||
+           (date1.getMonth() === date2.getMonth() &&
+             date1.getFullYear() !== date2.getFullYear() &&
+             date1.getDate() === date2.getDate())) {
+      return ', ' + date2.getFullYear();
+    }
+    
     return '';
   }
   
@@ -277,20 +287,20 @@ function makeFriendlyDates(arr) {
     ' ' + 
     getFriendlyDay(date1.getDate()) +
     getFriendlyYearBeginning();
-  
-  strDate2 = getFriendlyMonthEnding() +
-    getFriendlyDay(date2.getDate()) +
-    getFriendlyYearEnding();
-  
+
   result.push(strDate1);
-  result.push(strDate2);
   
-  return strDate2;
+  if(date2 > date1) {
+    strDate2 = getFriendlyMonthEnding() +
+      getFriendlyDay(date2.getDate()) +
+      getFriendlyYearEnding();
+
+    result.push(strDate2);
+  }
+  
+  return result;
 }
 
-makeFriendlyDates(['2016-07-01', '2016-07-04']);
-
-
-makeFriendlyDates(['2016-07-01', '2016-07-04']);
+makeFriendlyDates(["2022-09-05", "2023-09-04"]);
 
 
