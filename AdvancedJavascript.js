@@ -217,6 +217,7 @@ permAlone('aab');
 
 
 //Friendly Date Ranges
+
 function makeFriendlyDates(arr) {
   var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   
@@ -239,14 +240,56 @@ function makeFriendlyDates(arr) {
     }
   }
   
+  //defines if the beginning year should appear
+  function getFriendlyYearBeginning() {
+    if(date1.getFullYear() === new Date().getFullYear()) {
+      if(((Math.floor((date2 - date1) / (1000*60*60*24)))) > 360) {
+        return ', ' + date1.getFullYear();
+      }
+      else {
+        return '';
+      }
+    }
+    else {
+      return ', ' + date1.getFullYear();
+    }
+  }
   
-  strDate1 += monthArray[date1.getMonth()] + 
+  //returns the text that should be displayed for month ending
+  function getFriendlyMonthEnding() {
+    if(date1.getMonth() === date2.getMonth() &&
+      date1.getFullYear() === date2.getFullYear()) {
+      return '';
+    }
+    else {
+      return monthArray[date2.getMonth()];
+    }
+    
+    
+    return '';
+  }
+  
+  function getFriendlyYearEnding() {
+    return '';
+  }
+  
+  strDate1 = monthArray[date1.getMonth()] + 
     ' ' + 
-    getFriendlyDay(date1.getDate()) + ', ';
+    getFriendlyDay(date1.getDate()) +
+    getFriendlyYearBeginning();
   
+  strDate2 = getFriendlyMonthEnding() +
+    getFriendlyDay(date2.getDate()) +
+    getFriendlyYearEnding();
   
-  return strDate1;
+  result.push(strDate1);
+  result.push(strDate2);
+  
+  return strDate2;
 }
+
+makeFriendlyDates(['2016-07-01', '2016-07-04']);
+
 
 makeFriendlyDates(['2016-07-01', '2016-07-04']);
 
