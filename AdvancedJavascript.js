@@ -218,21 +218,34 @@ permAlone('aab');
 
 //Friendly Date Ranges
 function makeFriendlyDates(arr) {
-  var dayArray = [0, 'st', 'nd', 'rd'];
-  var monthArray = [0, 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   
-  var year1 = arr[0].substr(0,4);
-  var month1 = parseInt(arr[0].substr(5,2));
-  var day1 = parseInt(arr[0].substr(8,2));
+  var date1 = new Date(arr[0]);
+  var date2 = new Date(arr[1]);
   
-  var year2 = arr[1].substr(0,4);
-  var month2 = parseInt(arr[1].substr(5,2));
-  var day2 = parseInt(arr[1].substr(8,2)); 
+  var result = [];
   
-  var result = '';
+  var strDate1 = '';
+  var strDate2 = '';
+  
+  //returns the friendly day only
+  function getFriendlyDay(day){
+    var dayArray = [0, 'st', 'nd', 'rd'];
+    if(parseInt(day) > 3) {
+      return day + 'th';
+    }
+    else {
+      return day + dayArray[day];
+    }
+  }
   
   
-  return result;
+  strDate1 += monthArray[date1.getMonth()] + 
+    ' ' + 
+    getFriendlyDay(date1.getDate()) + ', ';
+  
+  
+  return strDate1;
 }
 
 makeFriendlyDates(['2016-07-01', '2016-07-04']);
