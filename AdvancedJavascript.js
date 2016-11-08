@@ -363,3 +363,26 @@ orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
 
 
 
+//Pairwise
+function pairwise(arr, arg) {
+  
+ var result = 0;
+ var elementsPairs = arr.slice();
+  
+ for (var index = 0; index < elementsPairs.length; index++) {
+   for(var index2 = index + 1; index2 < elementsPairs.length; index2++) {
+     if(elementsPairs[index] + elementsPairs[index2] == arg) {
+       result = result + index + index2;
+       elementsPairs[index] = NaN;
+       elementsPairs[index2] = NaN;
+     }
+   }
+ }
+ return result;
+}
+
+pairwise([1,4,2,3,0,5], 7);
+
+
+
+
