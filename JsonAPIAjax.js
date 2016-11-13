@@ -30,7 +30,7 @@ $(document).ready(function() {
   });
 
 
-//Convert JSON Data to HTML
+//Convert JSON Data to HTML 
 $(document).ready(function() {
     $("#getMessage").on("click", function() {
       $.getJSON("/json/cats.json", function(json) {
