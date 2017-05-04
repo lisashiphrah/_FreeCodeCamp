@@ -1,5 +1,5 @@
 //Trigger Click Events with jQuery
-$(document).ready(function() {
+$(document).ready(function() {  
     // Only change code below this line.
     $("#getMessage").on("click", function(){
       $("#getMessage").addClass('message');
