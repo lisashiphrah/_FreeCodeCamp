@@ -6,7 +6,6 @@ var motorBike = {
   // Only change code below this line.
 };
 
-
 //Construct JavaScript Objects with Functions
 var MotorBike = function() {
   this.engines = 1;
@@ -14,11 +13,9 @@ var MotorBike = function() {
   this.seats = 1;
 };
 
-
 //Make Instances of Objects with a Constructor Function
 var myCar = new Car();
 myCar.nickname = "";
-
 
 //Make Unique Objects by Passing Parameters to our Constructor
 var Car = function(wheels, seats, engines) {
