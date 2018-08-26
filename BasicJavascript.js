@@ -81,3 +81,18 @@ function addFive(){
 
 // Only change code above this line
 var returnedValue = addFive();
+
+
+///////////////////////////////////////////////////////////////////
+//Practice comparing different values
+///////////////////////////////////////////////////////////////////
+// Setup
+function compareEquality(a, b) {
+  if (a === b) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// Change this value to test
+compareEquality(10, "10");
