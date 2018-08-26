@@ -96,3 +96,18 @@ function compareEquality(a, b) {
 
 // Change this value to test
 compareEquality(10, "10");
+
+
+///////////////////////////////////////////////////////////////////
+//Iterate with JavaScript Do...While Loopses
+///////////////////////////////////////////////////////////////////
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line.
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
