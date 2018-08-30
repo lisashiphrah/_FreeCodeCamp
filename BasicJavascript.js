@@ -31,8 +31,9 @@ function randomFraction() {
 }
 
 
-
+//////////////////////////////////////////////////////////////////
 //Generate Random Whole Numbers with JavaScript
+//////////////////////////////////////////////////////////////////
 function randomWholeNum() {
   // Only change code below this line.
   return Math.floor(Math.random() * 10);
@@ -40,8 +41,9 @@ function randomWholeNum() {
 
 
 
-
+//////////////////////////////////////////////////////////////////
 //Generate Random Whole Numbers within a Range
+//////////////////////////////////////////////////////////////////
 function randomRange(myMin, myMax) {
   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
 }
