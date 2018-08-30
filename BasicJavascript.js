@@ -49,8 +49,9 @@ function randomRange(myMin, myMax) {
 }
 
 
-
+//////////////////////////////////////////////////////////////////
 //Sift through Text with Regular Expressions
+//////////////////////////////////////////////////////////////////
 // Only change code below this line.
  var expression = /and/gi;
 // Only change code above this line
